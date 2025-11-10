@@ -242,3 +242,36 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+doc_events = {
+    "Attendance": {
+        "on_submit": ["aitspl_integration.attendance.punctuality.validate_punctuality_rule", "aitspl_integration.attendance.overtime.create_overtime_log"]
+    }
+}
+override_whitelisted_methods = {
+	"aitspl_integration.aitspl_integration.api.get_biometric_integration": "aitspl_integration.aitspl_integration.api.get_biometric_integration"
+}
+fixtures = [
+    {
+        "dt": "DocType",
+        "filters": [["name", "in", [
+            "Attendance Rule Settings",
+            "Punctuality Violation Log",
+            "Biometric Integration",
+            "Biometric Device",
+	    "Overtime Log"
+        ]]]
+    },
+    {
+        "dt": "Custom Field",
+        "filters": [
+            ["name", "in", [
+                "Employee-ot_allowed",
+                "Shift Type-min_ot_hours",
+                "Shift Type-max_ot_hours"
+            ]]
+        ]
+    }
+]
+after_install = "aitspl_integration.install.after_install"
+after_migrate = "aitspl_integration.install.after_install"
+

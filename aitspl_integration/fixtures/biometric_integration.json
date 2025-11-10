@@ -1,0 +1,22 @@
+[
+ {
+  "config": null,
+  "device_configuration": [
+   {
+    "branch": null,
+    "company": "DE VOLTRANS PVT LTD",
+    "device_name": "Test",
+    "ip_address": "192.168.0.1",
+    "parent": "Biometric Integration",
+    "parentfield": "device_configuration",
+    "parenttype": "Biometric Integration",
+    "port": 88,
+    "status": 1
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Biometric Integration",
+  "modified": "2025-11-03 13:39:20.107071",
+  "name": "Biometric Integration"
+ }
+]

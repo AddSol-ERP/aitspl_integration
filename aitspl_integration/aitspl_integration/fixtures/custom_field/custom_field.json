@@ -1,0 +1,37 @@
+[
+  {
+    "doctype": "Custom Field",
+    "dt": "Shift Type",
+    "fieldname": "min_ot_hours",
+    "name": "Shift Type-min_ot_hours",
+    "label": "Minimum OT Hours",
+    "fieldtype": "Float",
+    "insert_after": "end_time",
+    "default": "0.5",
+    "description": "Minimum overtime (in hours) required to qualify for OT calculation",
+    "module": "AITSPL Integration"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Shift Type",
+    "fieldname": "max_ot_hours",
+    "name": "Shift Type-max_ot_hours",
+    "label": "Maximum OT Hours",
+    "fieldtype": "Float",
+    "insert_after": "min_ot_hours",
+    "default": "4.0",
+    "description": "Cap OT hours per day",
+    "module": "AITSPL Integration"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Employee",
+    "fieldname": "ot_allowed",
+    "name": "Employee-ot_allowed",
+    "label": "OT Allowed",
+    "fieldtype": "Check",
+    "insert_after": "attendance_device_id",
+    "default": "0",
+    "module": "AITSPL Integration"
+  }
+]
