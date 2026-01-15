@@ -72,7 +72,6 @@
    "fieldname": "overtime_hours",
    "fieldtype": "Data",
    "label": "Overtime Hours",
-   "precision": "2",
    "read_only": 1
   },
   {

@@ -248,7 +248,7 @@ doc_events = {
     }
 }
 override_whitelisted_methods = {
-	"aitspl_integration.aitspl_integration.api.get_biometric_integration": "aitspl_integration.aitspl_integration.api.get_biometric_integration"
+	"aitspl_integration.aitspl_integration.api.biometric_integration.get_biometric_integration": "aitspl_integration.aitspl_integration.api.biometric_integration.get_biometric_integration"
 }
 fixtures = [
     {
