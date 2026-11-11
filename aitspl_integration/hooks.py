@@ -243,6 +243,9 @@ app_license = "mit"
 # }
 
 doc_events = {
+    "Salary Slip": {
+        "before_validate": "aitspl_integration.attendance.salary_slip.set_overtime_hours"
+    },
     "Attendance": {
         "on_submit": ["aitspl_integration.attendance.punctuality.validate_punctuality_rule", "aitspl_integration.attendance.overtime.create_overtime_log"]
     }
