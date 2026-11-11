@@ -252,23 +252,9 @@ override_whitelisted_methods = {
 }
 fixtures = [
     {
-        "dt": "DocType",
-        "filters": [["name", "in", [
-            "Attendance Rule Settings",
-            "Punctuality Violation Log",
-            "Biometric Integration",
-            "Biometric Device",
-	    "Overtime Log"
-        ]]]
-    },
-    {
         "dt": "Custom Field",
         "filters": [
-            ["name", "in", [
-                "Employee-ot_allowed",
-                "Shift Type-min_ot_hours",
-                "Shift Type-max_ot_hours"
-            ]]
+            ["module", "=", "AITSPL Integration"]
         ]
     }
 ]
