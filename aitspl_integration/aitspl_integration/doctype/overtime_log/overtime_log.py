@@ -16,7 +16,9 @@ class OvertimeLog(Document):
 
 	def calculate_overtime_hours(self):
 		"""Calculate overtime for manual entries as well as attendance-created logs."""
-		self.overtime_hours = "0:00:00"
+		field = self.meta.get_field("overtime_hours")
+		numeric_hours = field.fieldtype in ("Float", "Currency", "Int")
+		self.overtime_hours = 0 if numeric_hours else "0:00:00"
 		if not (self.shift and self.attendance_date and self.in_time and self.out_time):
 			return
 
@@ -45,4 +47,4 @@ class OvertimeLog(Document):
 		if round(overtime.total_seconds() / 3600, 2) < get_min_ot_hours():
 			return
 
-		self.overtime_hours = str(overtime)
+		self.overtime_hours = overtime.total_seconds() / 3600 if numeric_hours else str(overtime)
